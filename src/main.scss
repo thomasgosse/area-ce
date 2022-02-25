@@ -12,6 +12,10 @@ body {
   padding: 0 var(--padding-y);
 }
 
+button {
+  touch-action: manipulation;
+}
+
 header {
   margin-bottom: 0px;
 
