@@ -1,0 +1,18 @@
+{
+  "name": "area-ce",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": {
+    "name": "Thomas Gosse",
+    "email": "thms.gosse@gmail.com"
+  },
+  "scripts": {
+    "build": "node build.js",
+    "build:watch": "node build-watch.js"
+  },
+  "dependencies": {
+    "esbuild": "^0.14.23",
+    "esbuild-plugin-sass": "^1.0.1",
+    "smoothscroll-polyfill": "^0.4.4"
+  }
+}
