@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+export default function slider() {
   const $container = document.getElementById("main");
   const $buttons = [...document.getElementsByClassName("slider-button")];
   const [$previousButton, $nextButton] = $buttons;
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateButtonsPosition() {
       const { y, height } = $firstImage.getBoundingClientRect();
-      const sliderSizePixel = getComputedStyle(document.body).getPropertyValue("--slider-size");
+      const sliderSizePixel = getComputedStyle(document.body).getPropertyValue("--slider-button-size");
       const sliderSize = parseInt(sliderSizePixel, 10);
       $buttons.forEach((button) => {
         button.style.top = `${y + height / 2 - sliderSize / 2}px`;
@@ -72,4 +72,4 @@ document.addEventListener("DOMContentLoaded", () => {
     const next = Math.min(current + 1, 5);
     methods.scrollTo(next);
   });
-});
+}
